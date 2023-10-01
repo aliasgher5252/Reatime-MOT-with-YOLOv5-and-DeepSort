@@ -90,7 +90,7 @@ parser = argparse.ArgumentParser(description='Description of your program')
 parser.add_argument('-source','--path', help='Provide the source of the video you want to infer', required=True)
 parser.add_argument('-labels','--labels', help='List of objects you want to track e.g ["person", "car"]', required=True,type=str,nargs='+')
 parser.add_argument('-name','--name', help='Name of your output file', required=True)
-parser.add_argument('-save','--save', help='Path in what output of the tracker should be saved, default is googlecolab/outputs', default="/content/Reatime-MOT-with-YOLOv5-and-DeepSort/Yolo_New/Outputs")
+parser.add_argument('-save','--save', help='Directory of output file', required=True)
 args = vars(parser.parse_args())
 VIDEO_PATH = args['path']
 LABELS=args['labels']
