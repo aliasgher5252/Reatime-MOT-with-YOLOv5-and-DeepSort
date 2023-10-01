@@ -181,7 +181,6 @@ while cap.isOpened():
     fps = 1/(end-start)
     FPS.append(fps)
     cv2.putText(resized_frame, f'FPS: {fps:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    cv2.imshow("Person Tracker", resized_frame)
     out.write(resized_frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
